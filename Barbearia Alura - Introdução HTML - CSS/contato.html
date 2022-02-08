@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contato - Barbearia Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1><img id="" src="imagens/logo.png" alt="Logo da Barbearia Alura"></h1>
+                
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <form>
+                <label for="nomesobrenome">Nome e sobrenome</label>
+                <input class="input-padrao" type="text" id="nomesobrenome" required>
+
+                <label for="email">Email</label> <!--label e input andam sempre de mãos dadas pois o label é a etiqueta do que o input deve conter, por isso possuem o mesmo id -->
+                <input class="input-padrao" type="email" id="email" required placeholder="seuemail@dominio.com"> 
+
+                <label for="telefone">Telefone</label>
+                <input class="input-padrao" type="tel" id="telefone" required placeholder="(XX) XXXXX-XXXX"> <!-- Placeholder deixa uma mensagem inicial dentro do campo -->
+                <!-- É importante colocar os tipos específicos do input para que ele funcione melhor no celular e até mesmo no computador, os tipo de inputs podem ser encontrados em www.mobileinputtype.com -->
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" cols="70" rows="10" required></textarea> <!-- Required faz com que o campo seja obrigatório e o cols é o número de colunas e o rows e o numero de linhas que eu disponibilizo para o usuário do campo text -->
+
+                <fieldset> <!-- O uso do fildset se dá NOS CAMPOS QUE POSSUEM INPUTS quando eu quero tratar assuntos diferentes e colocar um título no conjunto desses assuntos, com a expressão legend, a diferença dele para a div é justamente essa, a possibilidade da escrita de um titulo sem a necesssidade de usar uma div e um paragrafo, ou seja, é mais pra deixar bonitinho.-->
+                    <!-- Por exemplo: abaixo eu to tratando  de como o cliente prefere o contato, no outro fildset eu me refiro ao horario do atendimento, entao alem de dividir essas areas eu divido o valor de sentido delas -->
+                    <legend>Como prefere o nosso contato?</legend>
+                    <label> <input name="contato" type="radio" value="email"> Email</label>
+                    <!-- Neste caso o value do input não define o seu texto, apenas sinaliza que o valor de uma das opções do radio é o email -->
+
+                    <label> <input name="contato" type="radio" value="telefone"> Telefone</label>  
+                    <!-- A propriedade name serve para colocar um determinado número de inputs no mesmo grupo, para que dessa forma quando um for marcado o outro é desmarcado -->
+                    
+                    <label> <input name="contato" type="radio" value="whatsapp" checked> Whatsapp</label> <!-- Checked faz com que esta opção já apareça marcada logo de cara -->
+                </fieldset>
+
+                <fieldset> <!-- Em um outro exemplo o fieldset pode ser usado no preenchimento de informações de um cartão, endereço, produto e por ai vai, é uma div mais fofa!!!-->
+                    <legend>Qual o horário prefere ser atendido?</legend>
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+                
+
+                <input class="enviar" type="submit" value="Enviar formulário"><!-- Value seria o que vai escrito no botão -->
+            </form>
+
+            <table>
+                <thead> <!-- Cabeçalho da nossa lista onde vem o título de cada coluna -->
+                    <tr> <!-- isso aqui é uma linha -->
+                        <th>Dia</th> <!-- Isso aqui estrutura algo próximo de uma coluna -->
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody> <!-- Corpo da nossa lista onde terão as informações -->
+                    <tr>
+                        <td>Segunda</td> <!-- Isso aqui estrutura algo próximo de uma coluna -->
+                        <td>8h - 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>8h - 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>8h - 20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <img src="imagens/logo-branco.png" alt="Logo da Barbearia Alura">
+            <p class="copyright">&copy; Copyright Barbearia Alura - 2021</p>
+        </footer>
+    </body>
+</html>

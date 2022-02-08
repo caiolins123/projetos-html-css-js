@@ -1,0 +1,318 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 10px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c79;
+    text-decoration: underline;
+}
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color: #c78c79;
+}
+
+.produtos li:active{
+    border-color:green;
+}
+
+.produtos li:hover h2{
+    font-size: 34px;
+}
+
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produto-preco{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background:url("imagens/bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+main {
+  
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao, form textarea{ 
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+} /* O uso da vírgula serviu para adicionar o mesmo css para uma outra estrutura do html, no exemplo acima passando o css presente em nome, telefone e email para o textbox que contem a mensagem. */
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px; /* colocar uma curvatura nos cantos da borda */
+    transition: 1s all; /* essa propriedade é utilizada para "suavizar" a troca de cor do background quando passamos o mouse em cima do botão */
+    cursor: pointer; /* quando o mouse tiver em cima do botão o cursor é a mãozinha */
+    
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2); /* essa propriedade serve para aumentar ou dar o zoom no botão ou qualquer outra estrutura, então nesse caso queremos aumentar 20% logo o multiplicamos por 1.2 */
+    /*transform: rotate(70deg); mesma coisa do de cima só que ao invés de aumentar eu rodo o item */
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+    text-align: center;
+}
+
+/* css da página inicial */
+.banner {
+    width: 100%;
+}
+
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em; /* 2em é a mesma coisa que dizer que a minha fonte vai ter 2 vezes o tamanho base de uma fonte comum */
+    margin: 0 0 1em;
+    clear: left;
+    font-weight: bold;
+    /* color: rgba(0,0,0,0.3); neste caso nós definimos a cor da fonte do título e modificamos a opacidade da mesma, sendo assim possível mexer na opacidade até mesmo das cores, porém é necessário definir a cor pela sua configuração rgb e usar o a no final para indentificar 
+    a opacidade, e ai no final é colocado o nível de opacidade necessária */
+}
+
+.titulo-principal:first-letter{
+    font-weight: bold;
+}
+
+.titulo-principal:before{
+    content: "| ";
+
+}
+.titulo-principal:after{
+    content: " |";
+} /* nesses dois exemplos é mostrado que é possível colocar uma característica antes de depois do item que estamos mexendo, nesse caso foi usado o "|" para dar um charme a mais para o titulo /*
+
+ /*p:first-line {
+    font-style: italic;
+} Neste caso nois selecionamos que a primeira linha de um determinado parágrafo será escrito em itálico*/
+
+.principal{
+    padding: 3m 0;
+    background: #fefefe;
+    width: 940px;
+    margin: 20px auto 0 auto;
+}
+
+.principal p{
+    margin:0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: calc(20% - 26px);
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.beneficios{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.imagem-beneficios{
+    width: 60%;
+    opacity: 1; /* Neste comando nós definimos a opacidade da nossa imagem, que varia de 0 a 100% ou seja de 0 a 1, sendo medida entao com 0.3 por exemplo, a opacidade determina se a imagem vai ficar ofuscada ou normal */
+    transition: 400ms;
+    box-shadow: 10px 10px 5px #000000; /* esta propriedade diz respeito as sombras, que podem ser colocadas em imagens, blocos e até mesmo textos, e para utiliza-la além do uso do termo box-shandow também utilizamos a
+    seguinte configuração: (margem a partir do eixo x) (margem a partir do eixo y) (degradê da sombra, nesse caso o quão solida ou não você quer a sombra) (O tanto que você quer que ela se estenda) e por útimo sua cor,
+    em casos de uso em texto, titulos ou blocos a configuração se mantém a mesma. É possível também utilizar sombras interna dentro do elemento com o uso do inset antes do inicio da configuração da sombra como por exemplo: 
+    box-shadow: inset 0px 0px 5px 10px #FFFFFF; Neste caso é impossível que o eixo x e y possuam valores menores do que 0, pois se trata de uma sombra interna.*/
+
+}
+
+.imagem-beneficios:hover{
+    opacity: 0.3; /* neste caso modificamos a opacidade da imagem quando o mouse é passado por cima dela, deixando ela mais apagada, a opacidade é muito usada para causar esse efeito */ 
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888); /* isso aqui simplesmente faz um degradê de varias cores automaticamente, só precisa colocar a ordem certinha das cores */
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.video {
+    width: 560px;
+    margin: 5em auto;
+}
+
+.itens:before{
+    content: "★ ";
+} /* neste caso usamos a propriedade :before para colocar uma estrelinha antes de cada item da lista de benefícios */
+
+.itens:first-child{ /* esta função faz com que eu selecione o primeiro item de uma lista, podendo mexer nele especificamente, mas poderia ser o último com o last-child */
+    font-weight: bold;
+}
+
+/* nth-child(2) eu escolho um item especifico da lista pela sua posição que é colocada entre os parenteses, caso seja usado nth-child(2n) eu selecionaria todos os itens pares da nossa lista */
+
+.itens {
+    line-height:1.5; /* determina o espaçamento entres os intens da lista de acordo com a sua fonte, então nesse caso com o 1.5 colocamos um espaçamento de uma fonte mais 50% */
+}
+
+/* main > p{
+    background: red;
+} neste exemplo nós selecionamos apenas os parágrafos que são filhos diretos da main */
+
+/* img + p {
+    background-color: blue;
+} neste exemplo nós selecionamos o primeiro parágrafo "irmão direto" da imagem, ou seja, o que vem em sequência da imagem */
+
+/* img ~ p {
+    background: yellow;
+} Neste exemplo nós selecionamos todos os parágrafos que são "irmão diretos" da img, ou seja, que estão no mesmo bloco de código ou na mesma sequência*/
+
+/* .principal p:not(#missao){
+    background: orange;
+} Neste exemplo nós selecionamos todos os parágrafos contidos na nossa classe principal, porém retiramos o parágrafo que possui o id=missão */
+
+@media screen and (max-width: 480px){ 
+    .principal, .caixa, .conteudo-beneficios, .mapa-conteudo{
+        width: auto;
+    }
+
+    .video{
+        width: auto;
+        margin: 30px 0 30px 33px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios{
+        width: 100%;
+    }
+
+} /* Para deixar o nosso site responsivo em qualquer dispositivo se faz necessária algumas alterações dentro do nosso código, neste caso temos que utilizar a query
+@media screen para receber a informação sobre a tela do usuário e após isso com a função and (max-width: X) definir a largura máxima para que esse novo css vai ser usado.
+E sim meu camarada, é necessário a criação de um novo css que seja condisente com a porra do dispositivo que o corno do usuário está usando.

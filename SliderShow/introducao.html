@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>SlideShow</title>
+        <script language="Javascript">
+            
+            function iniciaSlider(){
+                max=6;
+                min=1;
+                fi = min;
+                carregaFoto("img/f1.jpg.jpg");
+            }
+
+            function carregaFoto(foto){
+                document.getElementById("moldura").style.backgroundImage="url("+foto+")";
+            }
+
+            function prox(){
+                fi++;
+                if (fi > max){
+                    fi=min;
+                }
+                carregaFoto("img/f"+fi+".jpg.jpg");
+            }
+
+            function ant(){
+                fi--;
+                if (fi < min){
+                    fi=max;
+                }
+                carregaFoto("img/f"+fi+".jpg.jpg");
+            }
+        </script>
+
+        <style>
+            #moldura{
+               width: 100%;
+               height: 230px;
+                background-color: #eeeeee;
+                background-size: 100% 230px;
+            }
+        </style>
+    </head>   
+    <body onload="iniciaSlider()">
+        <div id="moldura"></div>
+        <input type="button" value="Anterior" onclick="ant()"/>
+        <input type="button" value="Proximo" onclick="prox()"/>
+    </body> 
+</html>
